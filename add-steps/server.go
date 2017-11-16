@@ -52,7 +52,7 @@ func main() {
 	latency := flag.Duration("latency", time.Duration(0), "latency to add to each request")
 	flag.Parse()
 
-	fmt.Printf("serving on %s, success rate: %2f, latency: %v", *addr, *successRate, *latency)
+	fmt.Printf("serving on %s, success rate: %2f, latency: %v\n", *addr, *successRate, *latency)
 
 	httpHandler := handler{successRate: *successRate, latency: *latency}
 	http.HandleFunc("/", httpHandler.HandleRequest)

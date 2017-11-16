@@ -11,6 +11,8 @@ telemetry:
 - kind: io.l5d.prometheus
 - kind: io.l5d.recentRequests
   sampleRate: 0.25
+- kind: io.opentracing.tracer
+  accessToken: REPLACE ACCESS TOKEN HERE!
 
 usage:
   orgId: linkerd-examples-add-steps
